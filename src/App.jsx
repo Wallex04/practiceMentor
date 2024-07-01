@@ -1,0 +1,36 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Login from "./component/Login";
+import Register from "./component/Register";
+import ForgotPassword from "./component/ForgotPassword";
+import CompleteProfile from "./component/CompleteProfile";
+import Interest from "./component/Interest";
+import VerifyAccount from "./component/VerifyAccount";
+import VerificationSuccess from "./component/VerificationSuccess";
+import ResetPassword from "./component/ResetPassword";
+import PasswordResetSuccess from "./component/PasswordResetSuccess";
+import Home from "./component/Home";
+
+function App() {
+  
+
+  return (
+    <>
+    <Router>
+      <Routes>
+      <Route path='/register' element={<Register/>}/>
+     <Route path="/login" element={<Login/>}/>
+    <Route path="/Forgot-password" element={<ForgotPassword/>}/>
+    <Route path="CompleteProfile" element={<CompleteProfile/>}/>
+    <Route path="Interest" element={<Interest/>}/>
+    <Route path="Verify" element={<VerifyAccount/>}/>
+    <Route path="VerificationSuccess" element={<VerificationSuccess/>}/>
+    <Route path="ResetPassword" element={<ResetPassword/>}/>
+    <Route path="passwordResetSuccess" element={<PasswordResetSuccess/>}/>
+    <Route path="/" element={<Home/>}/>
+    </Routes>
+    </Router>
+    </>
+  )
+}
+
+export default App
