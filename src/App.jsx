@@ -8,7 +8,8 @@ import VerifyAccount from "./component/VerifyAccount";
 import VerificationSuccess from "./component/VerificationSuccess";
 import ResetPassword from "./component/ResetPassword";
 import PasswordResetSuccess from "./component/PasswordResetSuccess";
-import Home from "./component/Home";
+import Home from "./container/Home";
+import Landing from './container/Landing'
 
 function App() {
   
@@ -27,6 +28,7 @@ function App() {
     <Route path="ResetPassword" element={<ResetPassword/>}/>
     <Route path="passwordResetSuccess" element={<PasswordResetSuccess/>}/>
     <Route path="/" element={<Home/>}/>
+    <Route path="/landingPage" element={<Landing/>}/>
     </Routes>
     </Router>
     </>
