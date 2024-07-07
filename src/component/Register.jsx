@@ -1,10 +1,17 @@
 import React from 'react'
 import CustomInput from '../customInput/CustomInput'
 import CustomButton from './CustomButton'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import{ IoEyeOutline}  from "react-icons/io5";
 
 const Register = () => {
+  const navigate = useNavigate();
+
+  const handleCreateAccount = () => {
+    // Add any additional logic for account creation here
+    navigate('/Home');
+  };
+
   return (
     <div className='flex flex-col justify-center items-center w-[500px] h-screen bg-white mx-auto p-8 font-Inter'>
       <div className='w-[369px]'>
@@ -40,8 +47,10 @@ const Register = () => {
         </div>
         <div className='mb-4'>
           <div className='text-[16px] font-Inter'>
+          
         <CustomButton 
             Button= 'Create account'
+            onClick={handleCreateAccount}
         />
         </div>
         </div>

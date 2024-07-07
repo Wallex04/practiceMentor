@@ -9,7 +9,9 @@ import VerificationSuccess from "./component/VerificationSuccess";
 import ResetPassword from "./component/ResetPassword";
 import PasswordResetSuccess from "./component/PasswordResetSuccess";
 import Home from "./container/Home";
-import Landing from './container/Landing'
+import Landing from './container/Landing';
+import Footer from './component/Footer'
+import Mentors from "./container/Mentors";
 
 function App() {
   
@@ -17,8 +19,9 @@ function App() {
   return (
     <>
     <Router>
+  
       <Routes>
-      <Route path='/register' element={<Register/>}/>
+      <Route path='/' element={<Register/>}/>
      <Route path="/login" element={<Login/>}/>
     <Route path="/Forgot-password" element={<ForgotPassword/>}/>
     <Route path="CompleteProfile" element={<CompleteProfile/>}/>
@@ -27,9 +30,11 @@ function App() {
     <Route path="VerificationSuccess" element={<VerificationSuccess/>}/>
     <Route path="ResetPassword" element={<ResetPassword/>}/>
     <Route path="passwordResetSuccess" element={<PasswordResetSuccess/>}/>
-    <Route path="/" element={<Home/>}/>
-    <Route path="/landingPage" element={<Landing/>}/>
+    <Route path="/Landing" element={<Home/>}/>
+    <Route path="/Home" element={<Landing/>}/>
+    <Route path="/Mentors" element={<Mentors/>}/>
     </Routes>
+    <Footer/>
     </Router>
     </>
   )

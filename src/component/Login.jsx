@@ -1,10 +1,15 @@
 import React from 'react'
 import CustomInput from '../customInput/CustomInput';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import CustomButton from './CustomButton';
 import{ IoEyeOutline}  from "react-icons/io5";
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const handleUser = () => {
+    navigate('/Landing')
+  };
   return (
       <div className='flex flex-col justify-center items-center w-[500px] h-screen bg-white mx-auto p-8 font-Inter'>
       <div className='w-[369px]'>
@@ -34,6 +39,7 @@ const Login = () => {
         <div className='mt-4'>
         <CustomButton
             Button= 'Log in'
+            onClick={handleUser}
         />
         </div>
         <Link to='/Forgot-password' className='text-center mt-6 mb-6 text-blue-600 underline'>Forgot password?</Link>

@@ -2,15 +2,17 @@ import React from 'react'
 import belgiumFlag from "../assets/Group 17.png";
 import star from "../assets/star.png";
 
-const RecommendedMentors = ({ mentors, title = "Recommended Mentors" }) => {
+const RecommendedMentors = ({ mentors, title = "Recommended Mentors", showTitle = true }) => {
 
 
 
   return (
     <div className="mt-10">
+      {showTitle && (
     <h1 className="mb-4 text-[#353D45] font-semibold text-lg font-Inter">
       Recommended Mentors
     </h1>
+    )}
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
       {mentors.map((mentor, index) => (
         <div key={index} className="border border-[#ECEFF2] rounded-md p-3 py-4">
@@ -38,7 +40,7 @@ const RecommendedMentors = ({ mentors, title = "Recommended Mentors" }) => {
             </div>
           </div>
           <div className="grid grid-cols-2 xl:grid-cols-3 gap-2 mt-4">
-            {["Visual Design", "UI/UX Design", "Product Management"].map((skill, idx) => (
+            {["Visual Design", "Visual Design", "Visual Design", "Visual Design"].map((skill, idx) => (
               <p key={idx} className="bg-[#ECEFF2] rounded-2xl text-center text-[#697E8E] text-xs py-1">
                 {skill}
               </p>

@@ -6,7 +6,7 @@ const LearningActivities = ({learnings, title= 'Learning Articles'}) => {
 
   return (
     <div>
-      <h1 className="font-semibold text-lg text-[#353D45]">Learning Articles</h1>
+      <h1 className="font-semibold text-lg text-[#353D45]">{title}</h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-4">
         {learnings.map((learning, index) => (
           <div key={index} className="flex flex-col mb-3">
