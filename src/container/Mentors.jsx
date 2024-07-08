@@ -6,9 +6,23 @@ import imageNav from "../assets/jamesCameroon.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import SearchMentor from '../component/SearchMentor';
+import filter from '../assets/faders 1.png'
+import RecommendedMentors from '../component/RecommendedMentors';
+import recommended1 from "../assets/RecomMentor1.png";
+import recommended2 from '../assets/RecomMentor2.png';
+import recommended3 from '../assets/RecomMentor3.png';
+import belgiumFlag from "../assets/Group 17.png";
+import star from "../assets/star.png";
 
 
 const Mentors = () => {
+
+  const mentors = [
+    { name: "Esther Howard", img: recommended1 },
+    { name: "Rachael Greene", img: recommended2 },
+    { name: "Ken Adams", img: recommended3},
+  ]; 
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="px-4 lg:px-20 xl:px-40 mt-12">
@@ -62,6 +76,128 @@ const Mentors = () => {
 
       <h1 className='mt-10 mb-8 text-center font-semibold text-[24px] text-[#356169]'>Explore mentors in various fields and companies </h1>
       <SearchMentor/>
+      
+      <div className='flex font-semibold text-xl gap-10'>
+
+      
+        <div className='w-[340px] border border-gray-300 rounded-md px-14'>
+        <div className='flex gap-1'>
+        <img src={filter} alt="" />
+        <p>Filter</p>
+        </div>
+
+        <div>
+        <h1 className='font-semibold mt-8 mb-2'>Category</h1>
+        <hr className='w-full' />
+        <div className='mt-6'>
+        <label className='flex items-center text-lg text-[#697E8E] font-medium'>
+            <input className='mr-3 w-6 h-6' type="checkbox" />
+            Ux designer
+        </label>
+        </div>
+
+        <div className='mt-6'>
+        <label className='flex items-center text-lg text-[#697E8E] font-medium'>
+            <input className='mr-3 w-6 h-6' type="checkbox" />
+            Product Design
+        </label>
+        </div>
+
+        <div className='mt-6'>
+        <label className='flex items-center text-lg text-[#697E8E] font-medium'>
+            <input className='mr-3 w-6 h-6' type="checkbox" />
+            Product Management
+        </label>
+        </div>
+
+        <div className='mt-6'>
+        <label className='flex items-center text-lg text-[#697E8E] font-medium'>
+            <input className='mr-3 w-6 h-6' type="checkbox" />
+            Graphics Design
+        </label>
+        </div>
+        </div>
+
+        <div>
+        <h1 className='font-semibold mt-12 mb-2'>Companies</h1>
+        <hr className='w-full' />
+        <div className='mt-6'>
+        <label className='flex items-center text-lg text-[#697E8E] font-medium'>
+            <input className='mr-3 w-6 h-6' type="checkbox" />
+            Apple
+        </label>
+        </div>
+
+        <div className='mt-6'>
+        <label className='flex items-center text-lg text-[#697E8E] font-medium'>
+            <input className='mr-3 w-6 h-6' type="checkbox" />
+          Google
+        </label>
+        </div>
+
+        <div className='mt-6'>
+        <label className='flex items-center text-lg text-[#697E8E] font-medium'>
+            <input className='mr-3 w-6 h-6' type="checkbox" />
+            Meta
+        </label>
+        </div>
+
+        <div className='mt-6'>
+        <label className='flex items-center text-lg text-[#697E8E] font-medium'>
+            <input className='mr-3 w-6 h-6' type="checkbox" />
+           Microsoft
+        </label>
+        </div>
+        <div className='mt-6'>
+        <label className='flex items-center text-lg text-[#697E8E] font-medium'>
+            <input className='mr-3 w-6 h-6' type="checkbox" />
+           Amazon
+        </label>
+        </div>
+        </div>
+
+        <div>
+        <h1 className='font-semibold mt-12 mb-2 text-[#3C4750]'>Job titles</h1>
+        <hr className='w-full' />
+        <div className='mt-6'>
+        <label className='flex items-center text-[16px] text-[#697E8E] font-medium'>
+            <input className='mr-3 w-6 h-6' type="checkbox" />
+            Senior software Engineer
+        </label>
+        </div>
+
+        <div className='mt-6'>
+        <label className='flex items-center text-lg text-[#697E8E] font-medium'>
+            <input className='mr-3 w-6 h-6' type="checkbox" />
+          Product Designer
+        </label>
+        </div>
+
+        <div className='mt-6'>
+        <label className='flex items-center text-lg text-[#697E8E] font-medium'>
+            <input className='mr-3 w-6 h-6' type="checkbox" />
+            CEO
+        </label>
+        </div>
+
+        <div className='mt-6'>
+        <label className='flex items-center text-lg text-[#697E8E] font-medium'>
+            <input className='mr-3 w-6 h-6' type="checkbox" />
+          Founder
+        </label>
+        </div>
+        </div>
+        </div>
+    
+        <div className='border border-gray-300 rounded-md w-[805px]'>
+          <h1>Mentors list</h1>
+          <RecommendedMentors mentors={mentors}
+          gridColsClass="grid-cols-1"
+            showTitle={false}
+            skillsGridColClass= 'grid-col-4'
+          />
+        </div>
+        </div>
     </div>
   )
 }

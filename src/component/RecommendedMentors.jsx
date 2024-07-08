@@ -2,10 +2,10 @@ import React from 'react'
 import belgiumFlag from "../assets/Group 17.png";
 import star from "../assets/star.png";
 
-const RecommendedMentors = ({ mentors, title = "Recommended Mentors", showTitle = true }) => {
-
-
-
+const RecommendedMentors = ({ mentors, title = "Recommended Mentors", showTitle = true, 
+  gridColsClass = "grid-cols-1 lg:grid-cols-3",
+  flexClass = "md:flex-row md:px-10 md:gap-14 lg:px-0 lg:gap-3",
+  skillsGridColsClass= 'grid-col-2 xl:grid-col-3' }) => {
   return (
     <div className="mt-10">
       {showTitle && (
@@ -13,10 +13,10 @@ const RecommendedMentors = ({ mentors, title = "Recommended Mentors", showTitle 
       Recommended Mentors
     </h1>
     )}
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+    <div className={ `grid ${gridColsClass} gap-6 mb-6` }>
       {mentors.map((mentor, index) => (
         <div key={index} className="border border-[#ECEFF2] rounded-md p-3 py-4">
-          <div className="flex flex-col md:flex-row  md:px-10 md:gap-14 lg:px-0 lg:gap-3  gap-3">
+          <div className={`flex flex-col ${flexClass} gap-3`} >
             <div className="flex-shrink-0">
               <img src={mentor.img} alt="Mentor" className="mx-auto lg:mx-0 mentor-img" />
             </div>
@@ -39,7 +39,7 @@ const RecommendedMentors = ({ mentors, title = "Recommended Mentors", showTitle 
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 xl:grid-cols-3 gap-2 mt-4">
+          <div className={`grid ${skillsGridColsClass} gap-2 mt-4`}>
             {["Visual Design", "Visual Design", "Visual Design", "Visual Design"].map((skill, idx) => (
               <p key={idx} className="bg-[#ECEFF2] rounded-2xl text-center text-[#697E8E] text-xs py-1">
                 {skill}
