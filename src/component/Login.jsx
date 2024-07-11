@@ -43,7 +43,7 @@ const Login = () => {
         />
         </div>
         <Link to='/Forgot-password' className='text-center mt-6 mb-6 text-blue-600 underline'>Forgot password?</Link>
-        <p>Don't have an account?<Link to='/register' className='text-blue-600 underline ml-2'>Create account</Link> </p>
+        <p>Don't have an account?<Link to='/' className='text-blue-600 underline ml-2'>Create account</Link> </p>
       </div>
   )
 }

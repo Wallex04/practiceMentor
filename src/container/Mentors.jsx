@@ -11,6 +11,7 @@ import RecommendedMentors from '../component/RecommendedMentors';
 import recommended1 from "../assets/RecomMentor1.png";
 import recommended2 from '../assets/RecomMentor2.png';
 import recommended3 from '../assets/RecomMentor3.png';
+import recommended4 from '../assets/Diza Luka.png';
 import belgiumFlag from "../assets/Group 17.png";
 import star from "../assets/star.png";
 
@@ -19,11 +20,13 @@ const Mentors = () => {
 
   const mentors = [
     { name: "Esther Howard", img: recommended1 },
+    { name: "Diza Luka", img: recommended4},
     { name: "Rachael Greene", img: recommended2 },
     { name: "Ken Adams", img: recommended3},
   ]; 
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const paragraphText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lirure dolor in reprehenderit Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   return (
     <div className="px-4 lg:px-20 xl:px-40 mt-12">
         <nav className="flex justify-between items-center pt-8 relative">
@@ -77,13 +80,13 @@ const Mentors = () => {
       <h1 className='mt-10 mb-8 text-center font-semibold text-[24px] text-[#356169]'>Explore mentors in various fields and companies </h1>
       <SearchMentor/>
       
-      <div className='flex font-semibold text-xl gap-10'>
+      <div className='flex flex-col lg:flex-row gap-4 lg:gap-10'>
 
       
-        <div className='w-[340px] border border-gray-300 rounded-md px-14'>
-        <div className='flex gap-1'>
+        <div className='w-full lg:w-[340px] border border-gray-300 rounded-md px-4 lg:px-14 py-4'>
+        <div className='flex items-center gap-1'>
         <img src={filter} alt="" />
-        <p>Filter</p>
+        <p className='font-semibold'>Filter</p>
         </div>
 
         <div>
@@ -189,17 +192,19 @@ const Mentors = () => {
         </div>
         </div>
     
-        <div className='border border-gray-300 rounded-md w-[805px]'>
-          <h1>Mentors list</h1>
+        {/* <div className='border border-gray-300 rounded-md flex-1'>
+          <h1 className="p-4 border-b border-gray-300 font-semibold text-[18px] text-[#3C4750]">Mentors list</h1>
           <RecommendedMentors mentors={mentors}
+          paragraphText={paragraphText}
           gridColsClass="grid-cols-1"
             showTitle={false}
-            skillsGridColClass= 'grid-col-4'
+            skillsGridColsClass= 'grid-cols-2 md:grid-cols-4'
           />
-        </div>
+        </div> */}
         </div>
     </div>
   )
 }
 
 export default Mentors
+
