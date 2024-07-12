@@ -40,7 +40,7 @@ const RecommendedMentors = ({ mentors, paragraphText, title = "Recommended Mento
               </div>
             </div>
           </div>
-          <div className={`grid ${skillsGridColsClass} gap-1 mt-4 md:px-20`}>
+          <div className={`grid ${skillsGridColsClass} gap-1 mt-4`}>
             {["Visual Design", "Visual Design", "Visual Design", "Visual Design"].map((skill, idx) => (
               <p key={idx} className="bg-[#ECEFF2] rounded-2xl text-center m-0 p-0 text-[#697E8E] text-xs py-1 md:max-w-24">
                 {skill}

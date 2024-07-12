@@ -192,7 +192,7 @@ const Mentors = () => {
         </div>
         </div>
     
-        {/* <div className='border border-gray-300 rounded-md flex-1'>
+        <div className='border border-gray-300 rounded-md flex-1'>
           <h1 className="p-4 border-b border-gray-300 font-semibold text-[18px] text-[#3C4750]">Mentors list</h1>
           <RecommendedMentors mentors={mentors}
           paragraphText={paragraphText}
@@ -200,7 +200,7 @@ const Mentors = () => {
             showTitle={false}
             skillsGridColsClass= 'grid-cols-2 md:grid-cols-4'
           />
-        </div> */}
+        </div>
         </div>
     </div>
   )
