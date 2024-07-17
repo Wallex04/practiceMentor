@@ -1,8 +1,9 @@
-import React from 'react'
-import belgiumFlag from "../assets/Group 17.png";
+
+import React from 'react';
+import belgiumFlag from "../assets/flagBelgium.png";
 import star from "../assets/star.png";
 
-const RecommendedMentors = ({ mentors, paragraphText, title = "Recommended Mentors", showTitle = true, 
+const RecommendedMentors = ({ mentors, paragraphText, title = "Recommended Mentors", showTitle = true, showText= true,
   gridColsClass = "grid-cols-1 lg:grid-cols-3",
   flexClass = "md:flex-row md:px-10 md:gap-14 lg:px-0 lg:gap-3",
   skillsGridColsClass= 'grid-cols-2 lg:grid-cols-3' }) => {
@@ -25,22 +26,24 @@ const RecommendedMentors = ({ mentors, paragraphText, title = "Recommended Mento
                 {mentor.name}
                 <img className="w-4 h-2" src={belgiumFlag} alt="Belgium Flag" />
               </h1>
-              <p className="text-base font-medium text-[#45535F] mb-1">
+              <p className="text-[14px] font-medium text-[#45535F] mb-1">
                 Senior product designer at Uber
               </p>
               <p className="text-[#697E8E] font-medium text-sm mb-1">
                 24 mentees mentored
               </p>
               <p className='text-[#697E8E] font-Inter font-medium text-[13px]'>{paragraphText}</p>
+              {showText && (
               <div className="flex items-center gap-1">
                 <img src={star} alt="Star" />
                 <p className="text-sm font-medium text-[#697E8E] mb-1">
                   5.0 (10 Reviews)
                 </p>
               </div>
+              )}
             </div>
           </div>
-          <div className={`grid ${skillsGridColsClass} gap-1 mt-4`}>
+          <div className={`grid ${skillsGridColsClass} gap-1 mt-4 md:px-20 lg:px-0`}>
             {["Visual Design", "Visual Design", "Visual Design", "Visual Design"].map((skill, idx) => (
               <p key={idx} className="bg-[#ECEFF2] rounded-2xl text-center m-0 p-0 text-[#697E8E] text-xs py-1 md:max-w-24">
                 {skill}
@@ -53,5 +56,7 @@ const RecommendedMentors = ({ mentors, paragraphText, title = "Recommended Mento
   </div>
   )
 }
+
+
 
 export default RecommendedMentors

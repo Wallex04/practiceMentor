@@ -129,8 +129,8 @@ const learnings= [
           <h1 className='text-center text-[24px] font-semibold text-[#353D45] mt-24'>Industry leading specialists in top companies<br/> around the world</h1>
           <p className='text-[16px] text-center font-semibold text-[#697E8E] mb-8'>Explore mentors in various fields and companies</p>
 
-          <RecommendedMentors mentors={mentors} showTitle={false} />
-          <RecommendedMentors mentors={mentors2} showTitle={false} />
+          <RecommendedMentors mentors={mentors} showTitle={false} showText={false} />
+          <RecommendedMentors mentors={mentors2} showTitle={false} showText={false}/>
           <div className='flex justify-between mt-20 items-center'>
             <h1 className='font-semibold text-[20px] text-[#353D45]'>Explore learning articles from our mentors</h1>
           <Link className='text-[#004AAD] font-semibold text-[16px] flex gap-3 justify-center items-center' to="/all-articles">See All <img src={rightArrow} alt="" /></Link>

@@ -12,6 +12,9 @@ import Home from "./container/Home";
 import Landing from './container/Landing';
 import Footer from './component/Footer'
 import Mentors from "./container/Mentors";
+import SingleMentor from "./component/SingleMentor";
+import Booking from "./component/Booking";
+import Chats from "./component/Chats";
 
 function App() {
   
@@ -33,6 +36,9 @@ function App() {
     <Route path="/Landing" element={<Home/>}/>
     <Route path="/Home" element={<Landing/>}/>
     <Route path="/Mentors" element={<Mentors/>}/>
+    <Route path="/singleMentor" element={<SingleMentor/>}/>
+    <Route path="/booking" element={<Booking/>}/>
+  <Route path="/chat" element={<Chats/>}/>
     </Routes>
     <Footer/>
     </Router>

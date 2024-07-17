@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import Doron from '../assets/Doron.svg'
 import { Link } from "react-router-dom";
 import { IoMdNotifications } from "react-icons/io";
@@ -12,8 +12,6 @@ import recommended1 from "../assets/RecomMentor1.png";
 import recommended2 from '../assets/RecomMentor2.png';
 import recommended3 from '../assets/RecomMentor3.png';
 import recommended4 from '../assets/Diza Luka.png';
-import belgiumFlag from "../assets/Group 17.png";
-import star from "../assets/star.png";
 
 
 const Mentors = () => {
@@ -206,5 +204,5 @@ const Mentors = () => {
   )
 }
 
-export default Mentors
+export default Mentors;
 
