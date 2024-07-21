@@ -15,6 +15,9 @@ import Mentors from "./container/Mentors";
 import SingleMentor from "./component/SingleMentor";
 import Booking from "./component/Booking";
 import Chats from "./component/Chats";
+import MenteeProfile from "./component/MenteeProfile";
+import ChatVideo from "./component/ChatVideo";
+import VideoChatComp from "./component/VideoChatComp";
 
 function App() {
   
@@ -38,7 +41,10 @@ function App() {
     <Route path="/Mentors" element={<Mentors/>}/>
     <Route path="/singleMentor" element={<SingleMentor/>}/>
     <Route path="/booking" element={<Booking/>}/>
-  <Route path="/chat" element={<Chats/>}/>
+    <Route path="/chat" element={<Chats/>}/>
+    <Route path="/MenteeProfile" element={<MenteeProfile/>}/>
+    <Route path="/chatVideo" element={<ChatVideo/>}/>
+    <Route path="/videoComponent" element={<VideoChatComp/>}/>
     </Routes>
     <Footer/>
     </Router>

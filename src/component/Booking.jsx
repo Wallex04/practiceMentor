@@ -18,7 +18,7 @@ const Booking = () => {
         <h1 className='mt-6 text-[20px] md:text-[24px] font-bold text-[#45535F] mb-6'>Mentor Bookings</h1>
         <h1 className='text-[14px] md:text-[16px] font-medium text-[#353D45] mb-7'>Membership plan</h1>
         <div className='flex flex-col md:flex-row gap-4 items-center'>
-          <img src={Monica} alt="Diza Luka" className='w-full md:w-auto' />
+          <img src={Monica} alt="Monica" className='w-full md:w-auto' />
           <div className='flex-grow'>
             <div className='flex justify-between items-center w-full'>
               <h1 className='flex items-center font-medium text-[#23292E] gap-1 text-[14px] md:text-[16px] mb-2'>Monica Gueller <img className='w-[13px] h-[11px]' src={flagBelgium} alt="Flag" /> </h1>

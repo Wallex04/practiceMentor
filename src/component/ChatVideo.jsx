@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavComponent from './NavComponent';
 import Diza1 from '../assets/chatsDuza1.png';
 import Ross from '../assets/Ross (1).png';
@@ -10,8 +10,19 @@ import { IoVideocamOutline } from "react-icons/io5";
 import chatText from '../assets/ChatImage (1).png';
 import chatText2 from '../assets/ChatImage (2).png';
 import Circle from '../assets/chatAbs.png';
+import VideoChatComp from './VideoChatComp'; // Import the VideoChatComp component
 
 const Chats = () => {
+  const [isVideoChatOpen, setIsVideoChatOpen] = useState(false);
+
+  const handleVideoIconClick = () => {
+    setIsVideoChatOpen(true);
+  };
+
+  const handleCloseVideoChat = () => {
+    setIsVideoChatOpen(false);
+  };
+
   return (
     <div className='mx-4 md:mx-8 lg:mx-20'>
       <div className='pb-5'>
@@ -78,7 +89,7 @@ const Chats = () => {
                 <h1 className='flex justify-between text-[16px] text-[#23292E] font-bold'>Diza Luka</h1>
                 <h1 className='flex justify-between text-[12px] font-medium text-[#697E8E]'>Online</h1>
               </div>
-              <IoVideocamOutline className='' color='#889BA8' size={40}/>
+              <IoVideocamOutline onClick={handleVideoIconClick} color='#889BA8' size={40}/>
             </div>
           </div>
 
@@ -105,6 +116,8 @@ const Chats = () => {
           </div>
         </div>
       </div>
+
+      {isVideoChatOpen && <VideoChatComp onClose={handleCloseVideoChat} />}
     </div>
   );
 }
